@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate') %>
+
+    <h1 class="text-center">All Teachers</h1>
+    <ul>
+        <% for(let mudarris of mudarrisoon) {%>
+           <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" alt="" src="<%=mudarris.image%> ">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=mudarris.name%></h5>
+                        <p class="card-text"><%=mudarris.description%></p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <%=mudarris.location%>
+                            </small>
+                        </p>
+                        <a class="btn btn-primary" href="/mudarrisoon/<%=mudarris._id%>">View <%=mudarris.name%></a>
+                    </div>
+                </div>
+            </div>
+           </div>
+            <% } %>
+    </ul>

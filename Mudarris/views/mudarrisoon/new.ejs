@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">
+        Add Mudarris
+    </h1>
+    <div class="col-6 offset-3">
+        <form action="/mudarrisoon" method="POST">
+
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="mudarris[name]">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="subject">Subject</label>
+                <input class="form-control" type="text" id="subject" name="mudarris[subject]">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="mudarris[location]">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="image">Image URL</label>
+                <input class="form-control" type="text" id="image" name="mudarris[image]">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="mudarris[description]"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="fee">Tuition Fee</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">£</span>
+                    <input class="form-control" type="text" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="mudarris[fee]">
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <button class="btn btn-success">Add Mudarris</button>
+            </div>
+        </form>
+    </div>
+</div>
